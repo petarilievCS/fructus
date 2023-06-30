@@ -13,8 +13,8 @@ struct OnboardingView: View {
     // MARK: - BODY
     var body: some View {
         TabView {
-            ForEach(0..<5) { _ in
-                CardView()
+            ForEach(0..<fruitsData.count, id: \.self) { i in
+                CardView(fruit: fruitsData[i])
             }
         } //: TabView
         .tabViewStyle(.page)
