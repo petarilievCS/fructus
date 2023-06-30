@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationView {
+            List {
+                ForEach(fruitsData.shuffled()) { fruit in
+                    NavigationLink(
+                        destination: FruitDetailView(fruit: fruit)) {
+                        FruitRowView(fruit: fruit)
+                            .padding(.vertical, 4)
+                    }
+                }
+            } //: List
+            .navigationTitle("Fruits")
+        } //: NavigationView
     }
 }
 
