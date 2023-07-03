@@ -20,6 +20,7 @@
 		6A1BDF032A4F6D00006306EA /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BDF022A4F6D00006306EA /* FruitDetailView.swift */; };
 		6A1BDF052A4F701C006306EA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BDF042A4F701C006306EA /* HeaderView.swift */; };
 		6A1BDF072A4F7243006306EA /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BDF062A4F7243006306EA /* SourceLinkView.swift */; };
+		6A8896242A533A7A00A2EB41 /* NutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8896232A533A7A00A2EB41 /* NutrientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		6A1BDF022A4F6D00006306EA /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		6A1BDF042A4F701C006306EA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6A1BDF062A4F7243006306EA /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
+		6A8896232A533A7A00A2EB41 /* NutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				6A1BDF002A4F6386006306EA /* FruitRowView.swift */,
 				6A1BDF042A4F701C006306EA /* HeaderView.swift */,
 				6A1BDF062A4F7243006306EA /* SourceLinkView.swift */,
+				6A8896232A533A7A00A2EB41 /* NutrientsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A1BDEFF2A4F5D4E006306EA /* FruitData.swift in Sources */,
+				6A8896242A533A7A00A2EB41 /* NutrientsView.swift in Sources */,
 				6A1BDF072A4F7243006306EA /* SourceLinkView.swift in Sources */,
 				6A1BDEE72A4F486B006306EA /* ContentView.swift in Sources */,
 				6A1BDF012A4F6386006306EA /* FruitRowView.swift in Sources */,
