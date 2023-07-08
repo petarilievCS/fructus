@@ -11,6 +11,10 @@ struct Settings: View {
     // MARK: - ENVIRONMENT
     @Environment(\.presentationMode) var presentationMode
     
+    // MARK: - STATE
+    @State private var restared: Bool = false
+    @AppStorage("onboarded") var onboarded: Bool = false
+    
     // MARK: - BODY
     var body: some View {
         NavigationView {
@@ -31,14 +35,33 @@ struct Settings: View {
                         SettingsLabel(text: "Fructus", image: "info.circle")
                     } //: GroupBox
                     
-                    // TODO: Section 2
+                    GroupBox {
+                        Divider().padding(.vertical, 4)
+                        Text("If you wish, you can restart the application by toggling the switch in the box below. That would cause the onboarding process to start again and let you see the welcome screen.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        Toggle(restared ? "Restarted".uppercased() : "Restart".uppercased(), isOn: $restared)
+                            .padding()
+                            .foregroundColor(.green)
+                            .fontWeight(.bold)
+                            .background {
+                                Color(.tertiarySystemBackground)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            }
+                    } label: {
+                        SettingsLabel(text: "Customization", image: "paintbrush")
+                    } //: GroupBox
+
                     
                     GroupBox {
                         SettingsRow(name: "Developer", value: "Petar Iliev")
                         SettingsRow(name: "Designer", value: "Petar Iliev")
                         SettingsRow(name: "Compatibility", value: "iOS 16.2")
                         SettingsRow(name: "Website", linkLabel: "petariliev.io", linkDestination: "petariliev.io")
-                        SettingsRow(name: "Instagram", linkLabel: "@petarr_iliev", linkDestination: "https://www.instagram.com/petarr_iliev/")
+                        SettingsRow(name: "Instagram", linkLabel: "@petarr_iliev", linkDestination: "www.instagram.com/petarr_iliev/")
                         SettingsRow(name: "SwiftUI", value: "4.0")
                         SettingsRow(name: "Version", value: "1.0.0")
                     } label: {
@@ -59,6 +82,9 @@ struct Settings: View {
                 }
             } //: ScrollView
         } //: NavigationView
+        .onDisappear {
+            onboarded = !restared
+        }
     }
 }
 
